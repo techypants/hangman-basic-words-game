@@ -1,0 +1,22 @@
+The given code is an implementation of the Hangman game. It allows the user to play the game in three different levels: Easy, Moderate, and Hard. The code includes additional features such as the option to select different sets of secret words and a hall of fame to display the top records.
+
+The code begins by importing necessary modules such as `random`, `sqlite3`, and `tabulate`. It also defines a list of Hangman ASCII art, representing different stages of the hangman drawing.
+
+Next, the code establishes a connection with an SQLite database to store the hall of fame records. It creates a table called "records" if it doesn't already exist.
+
+The code includes several functions:
+1. `getRandomWord`: It takes a word list as input and returns a random word from that list.
+2. `displayBoard`: It displays the hangman board, including the ASCII art, missed letters, correct letters, and blanks representing the secret word.
+3. `getGuess`: It prompts the user to enter a guess and validates the input to ensure it is a single letter and hasn't been guessed before.
+4. `selectWordSet`: It allows the user to select a set of secret words based on the chosen level.
+5. `displayHallOfFame`: It retrieves the hall of fame records from the database and displays them using the `tabulate` library.
+6. `updateHallOfFame`: It updates the hall of fame records if the player achieves a high score.
+7. `displayIntroMenu`: It displays the introductory menu, including options to play the game, view the hall of fame, and learn about the game.
+8. `displayWordSetMenu`: It displays the menu for selecting sets of secret words.
+9. `displayAboutMenu`: It displays information about the game and its different levels.
+10. `gameLoop`: It contains the main game logic, including checking for correct guesses, updating missed letters, and determining if the player has won or lost.
+11. `playAgain`: It prompts the user to play again and returns a boolean value based on the response.
+
+Finally, the `playHangman` function serves as the main game loop. It prompts the user to enter their name, displays the introductory menu, and handles the user's choice. Depending on the chosen level, it calls the appropriate functions to set up the game and starts the game loop. After the game finishes, it asks the user if they want to play again or exit the game.
+
+Overall, the code seems to be well-structured and includes error handling and input validation. It incorporates additional features as requested and utilizes the `tabulate` library for visualizing the hall of fame records in a table format.
